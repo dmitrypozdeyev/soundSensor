@@ -12,7 +12,7 @@ pinMode(FIRST_PIN+1,OUTPUT);
 pinMode(FIRST_PIN+2,OUTPUT);
 pinMode(FIRST_PIN+3,OUTPUT);
 pinMode(FIRST_PIN+4,OUTPUT);
-pinMode(SENSOR,INPUT);
+pinMode(SENSOR,OUTPUT); digitalWrite(SENSOR,HIGH); delay(100); pinMode(SENSOR,INPUT); //нужно чтобы работало(инициализировать сенсор)
 }
 
 void loop() {
@@ -25,7 +25,7 @@ showVol(map(analogRead(SENSOR),MIN,MAX,0,5));
 //Serial.println(analogRead(SENSOR));
 
 }
-void showVol(int vol){\
+void showVol(int vol){
 
   digitalWrite(FIRST_PIN, LOW);
   digitalWrite(FIRST_PIN+1, LOW);
