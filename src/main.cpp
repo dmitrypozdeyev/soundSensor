@@ -22,7 +22,7 @@ void loop() {
   //   showVol(vol);
   // }
 showVol(map(analogRead(SENSOR),MIN,MAX,0,5));
-Serial.println(analogRead(SENSOR));
+//Serial.println(analogRead(SENSOR));
 
 }
 void showVol(int vol){\
